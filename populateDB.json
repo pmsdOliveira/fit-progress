@@ -1,0 +1,41 @@
+[
+  {
+    "description": "Atum em óleo vegetal",
+    "brand": "É Continente",
+    "weight": 110,
+    "energy": 209,
+    "fat": 13,
+    "satFat": 2.1,
+    "carbs": 0,
+    "sugars": 0,
+    "fiber": 0,
+    "proteins": 23,
+    "salt": 1.2
+  },
+  {
+    "description": "Cogumelos laminados em conserva",
+    "brand": "UP",
+    "weight": 175,
+    "energy": 36,
+    "fat": 0.3,
+    "satFat": 0,
+    "carbs": 5.1,
+    "sugars": 2,
+    "fiber": 0,
+    "proteins": 1.9,
+    "salt": 0.9
+  },
+  {
+    "description": "Leite com chocolate",
+    "brand": "Gresso",
+    "weight": 200,
+    "energy": 59,
+    "fat": 0.7,
+    "satFat": 0.5,
+    "carbs": 9.6,
+    "sugars": 9.2,
+    "fiber": 0.4,
+    "proteins": 3.3,
+    "salt": 0.11
+  }
+]
