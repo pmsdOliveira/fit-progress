@@ -1,2 +1,12 @@
 #header
-  background: $base-color
+  background: $first-color
+  padding: 0.5rem
+  border-bottom: 0.2rem $third-color solid
+  box-sizing: border-box
+  display: grid
+  grid-template-columns: 6fr 4fr
+  //position: fixed
+
+@media screen and (max-width: 960px)
+  #header
+    grid-template-columns: 9fr 1fr

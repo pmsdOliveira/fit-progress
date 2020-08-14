@@ -1,48 +1,65 @@
 import React from "react";
 
 class Header extends React.Component {
+  dietDropdown = () => {
+    document.getElementById("dietDropdown").classList.toggle("extend");
+  };
+
+  workoutDropdown = () => {
+    document.getElementById("workoutDropdown").classList.toggle("extend");
+  };
+
+  /* window.onClick = (e) => {
+    if (!event.target.matches("."))
+  }; */
+
   render() {
     return (
-      <div>
-        <header id="header">
+      <header id="header">
+        <div className="title">
           <a href="#">
-            <h1 className="pageTitle">Fit Progress</h1>
+            <h1>Fit Progress</h1>
           </a>
-          <p className="pageSlogan">
-            Fit Progress is the best platform to help you track your <br />
-            nutrient intake along with your regular workouts.
+          <p>
+            Fit Progress is the best platform to help you track your nutrient
+            intake along with your workouts.
           </p>
-          <nav className="navbar">
-            <ul>
-              <li>
-                <a href="#">Water</a>
-              </li>
-              <li>
-                <a href="#">Ingredients</a>
-              </li>
-              <li>
-                <a href="#">Dishes</a>
-              </li>
-              <li>
-                <a href="#">Meals</a>
-              </li>
-              <li>
-                <a href="#">Exercises</a>
-              </li>
-              <li>
-                <a href="#">
-                  <button class="signin">Sign In</button>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <button class="signup">Sign Up</button>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </header>
-      </div>
+        </div>
+
+        <div className="navbar">
+          <a href="#water" className="bignav">
+            Water
+          </a>
+          <div class="dropdown">
+            <button className="dropdownBtn" onClick={this.dietDropdown}>
+              Diet &#9660;
+            </button>
+            <div id="dietDropdown" className="dropdownContent">
+              <a>Ingredients</a>
+              <a>Dishes</a>
+              <a>Meals</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button className="dropdownBtn" onClick={this.workoutDropdown}>
+              Workout &#9660;
+            </button>
+            <div id="workoutDropdown" className="dropdownContent">
+              <a>Running</a>
+              <a>Pushups</a>
+              <a>Dips</a>
+              <a>Pullups</a>
+              <a>Situps</a>
+              <a>Plank</a>
+              <a>Squats</a>
+              <a>Lounges</a>
+            </div>
+          </div>
+          <a className="bignav signButton">Sign In</a>
+          <a className="bignav signButton">Sign Up</a>
+          {/* <a className="smallnav">&#9776;</a> */}
+        </div>
+      </header>
     );
   }
 }

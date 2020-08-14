@@ -1,28 +1,66 @@
-.pageTitle
-  padding: 0.5rem 2rem;
-  display: inline-block
-  vertical-align: middle
-
-.pageSlogan
-  display: inline-block
-  vertical-align: middle
+.title
+  grid-column: 1
+  align-items: center
+  display: grid
+  grid-template-columns: 3fr 7fr
+  h1
+    grid-column: 1
+    text-align: center
+  p
+    grid-column: 2
+    text-align: start
+    margin-left: 0.5rem
 
 .navbar
-  margin-top: 1rem
-  display: inline-block
-  float: right
-  ul
-    list-style-type: none
-    li
-      float: left
-    a
+  grid-column: 2
+  align-items: center
+  justify-self: end
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+  text-align: center
+  a:hover
+    color: $fourth-color
+    cursor: pointer
+  .dropdown
+    .dropdownBtn
+      cursor: pointer
+      background-color: inherit
+      border: none
+      font-size: 1rem
+      color: $third-color
+    .dropdownBtn:hover
+      color: $fourth-color
+    .dropdownContent
+      padding: 0.2rem
+      text-align: left
+      border: 2px $fourth-color solid
+      display: none
+      position: absolute
+      border-color: $first-color
+      border-radius: 5%
+      background-color: $fourth-color
+      z-index: 1
+      a 
+        float: none
+        display: block
+      a:not(:last-child)
+        border-bottom: 1px $first-color solid
+    .extend
       display: block
-      text-align: center
-      padding: 0 1rem
 
-.signin, .signup
-  border-radius: 5rem
-  background-color: $theme-color
-  padding: 0.1rem 1rem
-  font-size: 1rem
 
+@media screen and (max-width: 960px)
+  .title
+    grid-column: 1
+
+  .navbar
+    grid-column: 2
+    ul
+      li.bignav
+        display: none
+      li.smallnav
+        display: block
+        margin-right: 1rem
+        font-size: 1.5rem
+      li.smallnav:hover
+        color: $fourth-color
