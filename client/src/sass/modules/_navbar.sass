@@ -1,66 +1,95 @@
 .title
-  grid-column: 1
   align-items: center
   display: grid
-  grid-template-columns: 3fr 7fr
+  grid-column: 1
+  grid-row: 1
+  grid-template-columns: 2fr 7fr
   h1
+    color: $third-color
     grid-column: 1
     text-align: center
   p
+    color: $fourth-color
     grid-column: 2
-    text-align: start
     margin-left: 0.5rem
+    text-align: start
 
 .navbar
-  grid-column: 2
   align-items: center
-  justify-self: end
+  column-gap: 0.5rem
   display: grid
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+  grid-column: 2
+  grid-row: 1
+  grid-template-columns: repeat(5, 1fr)
+  justify-self: end
   text-align: center
+  a, div
+    color: $third-color
   a:hover
     color: $fourth-color
     cursor: pointer
-  .dropdown
-    .dropdownBtn
-      cursor: pointer
-      background-color: inherit
-      border: none
-      font-size: 1rem
-      color: $third-color
-    .dropdownBtn:hover
-      color: $fourth-color
-    .dropdownContent
-      padding: 0.2rem
-      text-align: left
-      border: 2px $fourth-color solid
-      display: none
-      position: absolute
-      border-color: $first-color
-      border-radius: 5%
-      background-color: $fourth-color
-      z-index: 1
-      a 
-        float: none
-        display: block
-      a:not(:last-child)
-        border-bottom: 1px $first-color solid
-    .extend
+  .signBtn
+    background-color: inherit
+    border: 1px $third-color solid
+    border-radius: 10%
+    color: $third-color
+    padding: 0.2rem 0
+  .signBtn:hover
+    background-color: $third-color
+    color: $fourth-color
+  
+.menu
+  display: none
+
+.dropdown
+  .dropdownBtn
+    background-color: inherit
+    border: none
+    color: $third-color
+  .dropdownBtn:hover
+    color: $fourth-color
+    cursor: pointer
+  .dropdownContent
+    background-color: $first-color
+    border: 1px $third-color solid
+    border-radius: 5%
+    display: none
+    padding: 0.2rem 0.3rem
+    position: absolute
+    text-align: left
+    z-index: 1
+    a 
       display: block
+    a:not(:last-child)
+      border-bottom: 1px $third-color solid
+
+.dropdown:hover
+  .dropdownContent
+    display: block
+    a:hover
+      background-color: $third-color
+      color: $fourth-color
 
 
 @media screen and (max-width: 960px)
   .title
     grid-column: 1
+    grid-template-columns: 3fr 7fr
 
   .navbar
     grid-column: 2
-    ul
-      li.bignav
-        display: none
-      li.smallnav
+    grid-template-columns: 1fr
+    justify-self: center
+    a, .dropdown
+      display: none
+    .menu
+      display: block
+
+  .responsive
+    .navbar
+      display: grid
+      grid-row: 2
+      grid-template-rows: repeat(3, 1fr)
+      a:not(:nth-last-child(-n+3)), .dropdown
         display: block
-        margin-right: 1rem
-        font-size: 1.5rem
-      li.smallnav:hover
-        color: $fourth-color
+        justify-self: left

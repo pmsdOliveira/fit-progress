@@ -1,23 +1,15 @@
 import React from "react";
 
 class Header extends React.Component {
-  dietDropdown = () => {
-    document.getElementById("dietDropdown").classList.toggle("extend");
+  menuDropdown = () => {
+    document.getElementById("header").classList.toggle("responsive");
   };
-
-  workoutDropdown = () => {
-    document.getElementById("workoutDropdown").classList.toggle("extend");
-  };
-
-  /* window.onClick = (e) => {
-    if (!event.target.matches("."))
-  }; */
 
   render() {
     return (
-      <header id="header">
+      <header id="header" className="">
         <div className="title">
-          <a href="#">
+          <a href="#logo">
             <h1>Fit Progress</h1>
           </a>
           <p>
@@ -26,25 +18,23 @@ class Header extends React.Component {
           </p>
         </div>
 
-        <div className="navbar">
-          <a href="#water" className="bignav">
-            Water
-          </a>
-          <div class="dropdown">
-            <button className="dropdownBtn" onClick={this.dietDropdown}>
-              Diet &#9660;
+        <div id="navbar" className="navbar">
+          <a>Water</a>
+          <div className="dropdown">
+            <button className="dropdownBtn">
+              Diet <i className="fa fa-caret-down"></i>
             </button>
-            <div id="dietDropdown" className="dropdownContent">
+            <div className="dropdownContent">
               <a>Ingredients</a>
               <a>Dishes</a>
               <a>Meals</a>
             </div>
           </div>
-          <div class="dropdown">
-            <button className="dropdownBtn" onClick={this.workoutDropdown}>
-              Workout &#9660;
+          <div className="dropdown">
+            <button className="dropdownBtn">
+              Workout <i className="fa fa-caret-down"></i>
             </button>
-            <div id="workoutDropdown" className="dropdownContent">
+            <div className="dropdownContent">
               <a>Running</a>
               <a>Pushups</a>
               <a>Dips</a>
@@ -55,9 +45,11 @@ class Header extends React.Component {
               <a>Lounges</a>
             </div>
           </div>
-          <a className="bignav signButton">Sign In</a>
-          <a className="bignav signButton">Sign Up</a>
-          {/* <a className="smallnav">&#9776;</a> */}
+          <a className="signBtn">Sign In</a>
+          <a className="signBtn">Sign Up</a>
+          <a className="menu" onClick={this.menuDropdown}>
+            <i className="fa fa-bars fa-lg" aria-hidden="true"></i>
+          </a>
         </div>
       </header>
     );
