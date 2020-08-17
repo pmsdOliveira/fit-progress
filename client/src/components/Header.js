@@ -1,40 +1,34 @@
 import React from "react";
+import icon from "../assets/icon.png";
+import title from "../assets/title.png";
 
 class Header extends React.Component {
-  menuDropdown = () => {
-    document.getElementById("header").classList.toggle("responsive");
+  dropdown = () => {
+    document.getElementById("topnav").classList.toggle("responsive");
   };
 
   render() {
     return (
-      <header id="header" className="">
-        <div className="title">
-          <a href="#logo">
-            <h1>Fit Progress</h1>
+      <header id="header">
+        <div className="logo">
+          <a href="#home">
+            <img src={icon} alt="Fit Progress"></img>
+            <img src={title} alt="Diet and Workout Progress"></img>
           </a>
-          <p>
-            Fit Progress is the best platform to help you track your nutrient
-            intake along with your workouts.
-          </p>
         </div>
-
-        <div id="navbar" className="navbar">
-          <a>Water</a>
+        <div id="topnav" className="topnav">
+          <a href="#water">Water</a>
           <div className="dropdown">
-            <button className="dropdownBtn">
-              Diet <i className="fa fa-caret-down"></i>
-            </button>
-            <div className="dropdownContent">
-              <a>Ingredients</a>
-              <a>Dishes</a>
-              <a>Meals</a>
+            <button className="dropbtn">Diet</button>
+            <div class="dropdown-content">
+              <a href="#">Ingredients</a>
+              <a href="#">Dishes</a>
+              <a href="#">Meals</a>
             </div>
           </div>
           <div className="dropdown">
-            <button className="dropdownBtn">
-              Workout <i className="fa fa-caret-down"></i>
-            </button>
-            <div className="dropdownContent">
+            <button className="dropbtn">Workout</button>
+            <div className="dropdown-content">
               <a>Running</a>
               <a>Pushups</a>
               <a>Dips</a>
@@ -45,10 +39,19 @@ class Header extends React.Component {
               <a>Lounges</a>
             </div>
           </div>
-          <a className="signBtn">Sign In</a>
-          <a className="signBtn">Sign Up</a>
-          <a className="menu" onClick={this.menuDropdown}>
-            <i className="fa fa-bars fa-lg" aria-hidden="true"></i>
+          <a href="#about">About</a>
+          <a href="#about">Contact Us</a>
+          <div className="topnav-right">
+            <a href="#login">
+              <i class="fa fa-user" aria-hidden="true"></i> Log In
+            </a>
+          </div>
+          <a
+            href="javascript:void(0);"
+            className="menu"
+            onClick={this.dropdown}
+          >
+            &#9776;
           </a>
         </div>
       </header>
