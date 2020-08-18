@@ -2,13 +2,26 @@ import React from "react";
 
 export default class Navbar extends React.Component {
   dropdown = () => {
-    document.getElementById("navbar").classList.toggle("responsive");
+    document.getElementById("web-nav-left").classList.toggle("visible");
   };
 
   render() {
     return (
       <nav id="navbar">
-        <div className="topnav">
+        <div className="mobile-nav">
+          <a href="#login">
+            <i className="fa fa-user" aria-hidden="true"></i> Log In
+          </a>
+          <a
+            href="javascript:void(0);"
+            className="menu"
+            onClick={this.dropdown}
+          >
+            Menu &#9776;
+          </a>
+        </div>
+
+        <div id="web-nav-left" className="web-nav-left">
           <a href="#water">Water</a>
           <div className="dropdown">
             <button className="dropbtn">Diet</button>
@@ -29,22 +42,16 @@ export default class Navbar extends React.Component {
               <a>Plank</a>
               <a>Squats</a>
               <a>Lounges</a>
+              <a>Weight Lifting</a>
             </div>
           </div>
           <a href="#about">About</a>
           <a href="#about">Contact Us</a>
-          <div className="topnav-right">
+          <div className="web-nav-right">
             <a href="#login">
               <i className="fa fa-user" aria-hidden="true"></i> Log In
             </a>
           </div>
-          <a
-            href="javascript:void(0);"
-            className="menu"
-            onClick={this.dropdown}
-          >
-            Menu &#9776;
-          </a>
         </div>
       </nav>
     );
