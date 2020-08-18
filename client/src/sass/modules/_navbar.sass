@@ -64,6 +64,17 @@
 /* RESPONSIVE */
 
 @media screen and (max-width: 768px)
+  .animate
+    .menu-bar-1
+      //transform: rotate(-45deg) translate(-8px, 1px)
+      transform: rotate(-45deg) translate(-3px, 3px)
+    .menu-bar-2
+      opacity: 0
+    .menu-bar-3
+      //transform: rotate(45deg) translate(-4px, 2px)
+      transform: rotate(45deg) translate(-2px, -3px)
+  
+
   .mobile-nav
     a
       background-color: $first-color
@@ -78,16 +89,25 @@
       width: 50%
       z-index: 2
     a:hover
-      border-bottom: 3px $third-color solid
       background-color: $second-color
+      border-bottom: 3px $third-color solid
       color: $fourth-color
+    .menu-container
+      display: inline-block
+      .menu-bar-1, .menu-bar-2, .menu-bar-3
+        background-color: $third-color
+        height: 2px
+        margin: 2px 0 2px 1rem
+        transition: 0.3s
+        width: 20px
 
   .web-nav-left
     bottom: 0
     opacity: 0
     position: fixed
-    transform: translate(0, -100%)
+    transition: 0.3s
     top: 140px
+    width: 100%
     a, .dropdown, .dropbtn, .dropdown-content
       text-align: left
       width: 100%
@@ -95,12 +115,13 @@
       position: relative
       .dropdown-content
         position: relative
-      
-
+    .visible
+      opacity: 1
+    a:hover, .dropbtn:hover, .dropdown-content:hover
+      border-bottom: 3px transparent solid
 
   .web-nav-right
     display: none
 
   .web-nav-left.visible
     opacity: 1
-    transform: translate(0, 0)

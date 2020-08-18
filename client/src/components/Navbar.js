@@ -5,6 +5,10 @@ export default class Navbar extends React.Component {
     document.getElementById("web-nav-left").classList.toggle("visible");
   };
 
+  animateMenuBtn = () => {
+    document.getElementById("menu").classList.toggle("animate");
+  };
+
   render() {
     return (
       <nav id="navbar">
@@ -14,10 +18,18 @@ export default class Navbar extends React.Component {
           </a>
           <a
             href="javascript:void(0);"
+            id="menu"
             className="menu"
-            onClick={this.dropdown}
+            onClick={() => {
+              this.dropdown();
+              this.animateMenuBtn();
+            }}
           >
-            Menu &#9776;
+            <div className="menu-container">
+              <div className="menu-bar-1"></div>
+              <div className="menu-bar-2"></div>
+              <div className="menu-bar-3"></div>
+            </div>
           </a>
         </div>
 
@@ -45,8 +57,7 @@ export default class Navbar extends React.Component {
               <a>Weight Lifting</a>
             </div>
           </div>
-          <a href="#about">About</a>
-          <a href="#about">Contact Us</a>
+          <a href="#stretch">Stretch</a>
           <div className="web-nav-right">
             <a href="#login">
               <i className="fa fa-user" aria-hidden="true"></i> Log In
