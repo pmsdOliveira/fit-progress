@@ -1,0 +1,67 @@
+.slideshow-container
+  margin: auto
+  max-width: 1000px
+  position: relative
+  
+.slides
+  display: none
+  img
+    width: 100%
+
+.prev, .next
+  border-radius: 0 3px 3px 0
+  color: white
+  cursor: pointer
+  font-weight: bold
+  margin-top: -22px
+  padding: 16px
+  position: absolute
+  top: 50%
+  transition: 0.3s ease
+  user-select: none
+  width: auto
+
+.next
+  right: 0
+  border-radius: 3px 0 0 3px
+
+.prev:hover, .next:hover
+  background-color: rgba(0, 0, 0, 0.8)
+
+.text
+  bottom: 8px
+  color: #f2f2f2
+  padding: 8px 12px
+  position: absolute
+  text-align: center
+  width: 100%
+
+.numbertext
+  color: #f2f2f2
+  padding: 8px 12px
+  position: absolute
+  top: 0
+
+.dot
+  background-color: #bbb
+  border-radius: 50%
+  cursor: pointer
+  display: inline-block
+  height: 15px
+  margin: 0 2px
+  width: 15px
+  transition: background-color 0.6s ease
+
+.active, .dot:hover
+  background-color: #717171
+
+.fade
+  animation-name: fade
+  animation-duration: 1.5s
+
+@keyframes fade
+  0%
+    opacity: .4
+  100%
+    opacity: 1
+

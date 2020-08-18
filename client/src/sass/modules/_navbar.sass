@@ -1,0 +1,103 @@
+.topnav
+  background-color: $first-color
+  overflow: hidden
+  a
+    border-bottom: 3px transparent solid
+    color: $third-color
+    display: block
+    float: left
+    padding: 1rem 2rem
+    text-align: center
+    text-decoration: none
+  .menu
+    display: none
+
+.topnav-right
+  float: right
+
+.dropdown
+  float: left
+  overflow: hidden
+  .dropbtn
+    background-color: inherit
+    border: none
+    border-bottom: 3px transparent solid
+    color: $third-color
+    padding: 1rem 2rem
+  .dropdown-content
+    background-color: $fifth-color
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+    display: none
+    min-width: 160px
+    position: absolute
+    z-index: 1
+    a
+      background-color: $fifth-color
+      border-left: 3px transparent solid
+      color: $first-color
+      display: block
+      float: none
+      padding: 1rem 2rem
+      text-align: left
+      text-decoration: none
+
+.topnav a, .dropdown .dropbtn, .dropdown-content a
+  transition: 0.3s
+
+.topnav > a:hover, .topnav-right a:hover, .dropdown:hover .dropbtn
+  border-bottom: 3px $third-color solid
+  background-color: $second-color
+  color: $fourth-color
+
+.dropdown-content a:hover
+  background-color: $fourth-color
+  border-left: 3px $third-color solid
+  color: $third-color
+  padding-left: 2.5rem
+
+.dropdown:hover .dropdown-content
+  display: block
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 768px)
+  .topnav > a, .dropdown .dropbtn
+    display: none
+
+  .topnav
+    a.menu
+      display: block
+      float: right
+      width: 50%
+  
+  .topnav-right
+    display: block
+    float: left
+    width: 50%
+    a
+      width: 100%
+
+  .topnav.responsive
+    position: relative
+    > a
+      display: block
+      float: none
+      text-align: left
+    .dropdown
+      float: none
+      .dropbtn
+        display: block
+        text-align: left
+        width: 100%
+      .dropdown-content
+        position: relative
+    .topnav-right
+      position: absolute
+      left: 0
+      top: 0
+    .menu
+      position: absolute
+      right: 0
+      text-align: center
+      top: 0
