@@ -1,11 +1,8 @@
 import React from "react";
 
 export default class Navbar extends React.Component {
-  dropdown = () => {
-    document.getElementById("web-nav-left").classList.toggle("visible");
-  };
-
-  animateMenuBtn = () => {
+  animateDropdown = () => {
+    document.getElementById("web-nav").classList.toggle("visible");
     document.getElementById("menu").classList.toggle("animate");
   };
 
@@ -20,10 +17,7 @@ export default class Navbar extends React.Component {
             href="javascript:void(0);"
             id="menu"
             className="menu"
-            onClick={() => {
-              this.dropdown();
-              this.animateMenuBtn();
-            }}
+            onClick={this.animateDropdown}
           >
             <div className="menu-container">
               <div className="menu-bar-1"></div>
@@ -33,11 +27,11 @@ export default class Navbar extends React.Component {
           </a>
         </div>
 
-        <div id="web-nav-left" className="web-nav-left">
+        <div id="web-nav" className="web-nav">
           <a href="#water">Water</a>
           <div className="dropdown">
             <button className="dropbtn">Diet</button>
-            <div class="dropdown-content">
+            <div className="dropdown-content">
               <a href="#">Ingredients</a>
               <a href="#">Dishes</a>
               <a href="#">Meals</a>

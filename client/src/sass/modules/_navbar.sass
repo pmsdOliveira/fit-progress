@@ -1,4 +1,4 @@
-.web-nav-left
+.web-nav
   background-color: $first-color
   overflow: hidden
   a
@@ -9,9 +9,8 @@
     padding: 1rem 2rem
     text-align: center
     text-decoration: none
-
-.web-nav-right
-  float: right
+  .web-nav-right
+    float: right
 
 .dropdown
   float: left
@@ -39,10 +38,10 @@
       text-align: left
       text-decoration: none
 
-.web-nav-left a, .dropdown .dropbtn, .dropdown-content a
+.web-nav a, .dropbtn, .dropdown-content a
   transition: 0.3s
 
-.web-nav-left > a:hover, .web-nav-right a:hover, .dropdown:hover .dropbtn
+.web-nav > a:hover, .web-nav-right a:hover, .dropdown:hover .dropbtn
   border-bottom: 3px $third-color solid
   background-color: $second-color
   color: $fourth-color
@@ -66,19 +65,16 @@
 @media screen and (max-width: 768px)
   .animate
     .menu-bar-1
-      //transform: rotate(-45deg) translate(-8px, 1px)
       transform: rotate(-45deg) translate(-3px, 3px)
     .menu-bar-2
       opacity: 0
     .menu-bar-3
-      //transform: rotate(45deg) translate(-4px, 2px)
       transform: rotate(45deg) translate(-2px, -3px)
   
-
   .mobile-nav
     a
       background-color: $first-color
-      border-bottom: 3px transparent solid
+      border-bottom: 3px $third-color solid
       color: $third-color
       display: block
       float: left
@@ -90,7 +86,6 @@
       z-index: 2
     a:hover
       background-color: $second-color
-      border-bottom: 3px $third-color solid
       color: $fourth-color
     .menu-container
       display: inline-block
@@ -100,10 +95,14 @@
         margin: 2px 0 2px 1rem
         transition: 0.3s
         width: 20px
+    .menu:hover .menu-container
+      .menu-bar-1, .menu-bar-2, .menu-bar-3
+        background-color: $fourth-color
 
-  .web-nav-left
+  .web-nav
     bottom: 0
     opacity: 0
+    overflow-y: auto
     position: fixed
     transition: 0.3s
     top: 140px
@@ -117,11 +116,11 @@
         position: relative
     .visible
       opacity: 1
-    a:hover, .dropbtn:hover, .dropdown-content:hover
+    a:hover, .dropbtn:hover, .dropdown:hover .dropbtn
       border-bottom: 3px transparent solid
-
+  
   .web-nav-right
     display: none
 
-  .web-nav-left.visible
+  .web-nav.visible
     opacity: 1
