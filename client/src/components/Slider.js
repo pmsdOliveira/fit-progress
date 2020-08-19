@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Slide from "./Slide";
 
@@ -14,6 +14,7 @@ const Slider = () => {
     <Slide src={slide3} />,
     <Slide src={slide4} />,
   ];
+
   const [x, setX] = useState(0);
 
   const goLeft = () => {
@@ -25,6 +26,14 @@ const Slider = () => {
     if (x === -100 * (sliderArr.length - 1)) setX(0);
     else setX(x - 100);
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      goRight();
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, [x]);
 
   return (
     <div id="slider" className="slider">
@@ -39,10 +48,10 @@ const Slider = () => {
           </div>
         );
       })}
-      <button id="goLeft" onClick={goLeft}>
+      <button className="goLeft" onClick={goLeft}>
         <i className="fa fa-chevron-left"></i>
       </button>
-      <button id="goRight" onClick={goRight}>
+      <button className="goRight" onClick={goRight}>
         <i className="fa fa-chevron-right"></i>
       </button>
     </div>
