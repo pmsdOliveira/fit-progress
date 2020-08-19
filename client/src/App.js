@@ -3,17 +3,16 @@ import "./sass/App.sass";
 
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
-import Carousel from "./components/Carousel";
+import Slider from "./components/Slider";
 
-class App extends React.Component {
+export default class App extends React.Component {
   render() {
     return (
       <div>
         <Header />
         <Navbar />
+        <Slider />
       </div>
     );
   }
 }
-
-export default App;

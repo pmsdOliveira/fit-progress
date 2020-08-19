@@ -1,0 +1,52 @@
+.slider
+  align-items: center
+  background-color: $second-color
+  display: flex
+  margin: auto
+  overflow: hidden
+  position: relative
+  i
+    font-size: 2rem
+
+.slide
+  height: 90%
+  min-width: 100%
+  overflow: hidden
+  position: relative
+  transition: 0.5s
+
+#goLeft
+  background: none
+  border: none
+  border-radius: 50%
+  height: 20%
+  left: 0
+  outline: none
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  transition: 0.3s
+  width: 10%
+  &:hover
+    background: rgba(0, 0, 0, 0.4)
+    cursor: pointer
+    i
+      color: rgb(119, 119, 119)
+
+#goRight
+  background: none
+  border: none
+  border-radius: 50%
+  height: 20%
+  right: 0
+  outline: none
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  transition: 0.3s
+  width: 10%
+  &:hover
+    background: rgba(0, 0, 0, 0.4)
+    cursor: pointer
+    i
+      color: rgb(119, 119, 119)

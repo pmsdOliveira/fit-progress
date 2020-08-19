@@ -83,10 +83,9 @@
       text-align: center
       transition: 0.3s
       width: 50%
-      z-index: 2
-    a:hover
-      background-color: $second-color
-      color: $fourth-color
+      &:hover
+        background-color: $second-color
+        color: $fourth-color
     .menu-container
       display: inline-block
       .menu-bar-1, .menu-bar-2, .menu-bar-3
@@ -107,6 +106,7 @@
     transition: 0.3s
     top: 140px
     width: 100%
+    z-index: 2
     a, .dropdown, .dropbtn, .dropdown-content
       text-align: left
       width: 100%
