@@ -1,9 +1,7 @@
 .web-nav
-  background-color: $first-color
   overflow: hidden
   a
     border-bottom: 3px transparent solid
-    color: $third-color
     display: block
     float: left
     padding: 1rem 2rem
@@ -19,19 +17,17 @@
     background-color: inherit
     border: none
     border-bottom: 3px transparent solid
-    color: $third-color
     padding: 1rem 2rem
   .dropdown-content
-    background-color: $fifth-color
+    background-color: $light-color
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
     display: none
     min-width: 180px
     position: absolute
     z-index: 1
     a
-      background-color: $fifth-color
+      background-color: $light-color
       border-left: 3px transparent solid
-      color: $first-color
       display: block
       float: none
       padding: 1rem 2rem
@@ -42,14 +38,12 @@
   transition: 0.3s
 
 .web-nav > a:hover, .web-nav-right a:hover, .dropdown:hover .dropbtn
-  border-bottom: 3px $third-color solid
-  background-color: $second-color
-  color: $fourth-color
+  border-bottom: 3px $golden-color solid
+  color: $dark-light-color
 
 .dropdown-content a:hover
-  background-color: $fourth-color
-  border-left: 3px $third-color solid
-  color: $third-color
+  background-color: $dark-light-color
+  border-left: 3px $golden-color solid
   padding-left: 2.5rem
 
 .dropdown:hover .dropdown-content
@@ -73,9 +67,7 @@
   
   .mobile-nav
     a
-      background-color: $first-color
-      border-bottom: 3px $third-color solid
-      color: $third-color
+      border-bottom: 3px $golden-color solid
       display: block
       float: left
       padding: 1rem 2rem
@@ -84,19 +76,17 @@
       transition: 0.3s
       width: 50%
       &:hover
-        background-color: $second-color
-        color: $fourth-color
+        color: $dark-light-color
     .menu-container
       display: inline-block
       .menu-bar-1, .menu-bar-2, .menu-bar-3
-        background-color: $third-color
         height: 2px
         margin: 2px 0 2px 1rem
         transition: 0.3s
         width: 20px
     .menu:hover .menu-container
       .menu-bar-1, .menu-bar-2, .menu-bar-3
-        background-color: $fourth-color
+        background-color: $dark-light-color
 
   .web-nav
     bottom: 0
