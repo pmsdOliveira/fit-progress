@@ -9,10 +9,34 @@ import slide4 from "../assets/stretch.jpg";
 
 const Slider = () => {
   let sliderArr = [
-    <Slide src={slide1} />,
-    <Slide src={slide2} />,
-    <Slide src={slide3} />,
-    <Slide src={slide4} />,
+    <Slide
+      n="1"
+      src={slide1}
+      title="Keeping hydrated is crucial for health, but many people do not consume enough fluids."
+      text="Fit Progress helps you keeping track of how much water you drink, providing you with goals, reminders and statistics according to your daily fluid intake."
+      btn="Start now!"
+    />,
+    <Slide
+      n="2"
+      src={slide2}
+      title="A healthy diet is not about staying thin but feeling great, and improving your health."
+      text="Fit Progress allows you to store the nutritional info for your daily meals, helping you control your calorie intake."
+      btn="Start now!"
+    />,
+    <Slide
+      n="3"
+      src={slide3}
+      title="There are side effects when starting a new workout routine besides stronger muscles."
+      text="Fit Progress has a collection of challenges that increase difficulty depending on your performance and goals."
+      btn="Start now!"
+    />,
+    <Slide
+      n="4"
+      src={slide4}
+      title="Stretching may not be the most exciting part of working out but will make your workouts more efficient and safe."
+      text="Fit Progress comes with a routine of timed full body stretches to ensure you don't end up with tight muscles."
+      btn="Start now!"
+    />,
   ];
 
   const [x, setX] = useState(0);
