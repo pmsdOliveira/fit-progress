@@ -19,7 +19,7 @@ const Slider = () => {
     <Slide
       n="2"
       src={slide2}
-      title="A healthy diet is not about staying thin but feeling great, and improving your health."
+      title="A healthy diet is not about staying thin but feeling great and improving your health."
       text="Fit Progress allows you to store the nutritional info for your daily meals, helping you control your calorie intake."
       btn="Start now!"
     />,

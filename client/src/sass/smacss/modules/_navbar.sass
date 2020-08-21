@@ -1,10 +1,8 @@
 .web-nav
   overflow: hidden
   a
-    border-bottom: 3px transparent solid
-    display: block
     float: left
-    padding: 1rem 2rem
+    padding: 16px 3vw
     text-align: center
     text-decoration: none
   .web-nav-right
@@ -14,48 +12,51 @@
   float: left
   overflow: hidden
   .dropbtn
-    background-color: inherit
     border: none
-    border-bottom: 3px transparent solid
-    padding: 1rem 2rem
+    padding: 16px 3vw
   .dropdown-content
-    background-color: $light-color
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+    box-shadow: 0 8px 16px 0 $box-shadow-color
     display: none
     min-width: 180px
     position: absolute
     z-index: 1
     a
-      background-color: $light-color
-      border-left: 3px transparent solid
       display: block
       float: none
-      padding: 1rem 2rem
+      padding: 16px 32px
       text-align: left
       text-decoration: none
 
 .web-nav a, .dropbtn, .dropdown-content a
-  transition: 0.3s
-
-.web-nav > a:hover, .web-nav-right a:hover, .dropdown:hover .dropbtn
-  border-bottom: 3px $golden-color solid
-  color: $dark-light-color
-
-.dropdown-content a:hover
-  background-color: $dark-light-color
-  border-left: 3px $golden-color solid
-  padding-left: 2.5rem
-
-.dropdown:hover .dropdown-content
-  display: block
+  transition: $transition-time
 
 .mobile-nav a
   display: none
 
 
 
-/* RESPONSIVE */
+// ******************** MEDIA QUERIES ********************
+// ********** HOVER DEVICES **********
+@media (hover: hover)
+  .dropdown-content a:hover
+    padding-left: 40px
 
+  .dropdown:hover .dropdown-content
+    display: block
+
+
+
+// ********** NON HOVER DEVICES **********
+@media (hover: none)
+  .dropdown-content a:active
+    padding-left: 40px
+
+  .dropdown:active .dropdown-content
+    display: block
+
+
+
+// ********** SMALL SCREEN **********
 @media screen and (max-width: 768px)
   .animate
     .menu-bar-1
@@ -67,34 +68,28 @@
   
   .mobile-nav
     a
-      border-bottom: 3px $golden-color solid
       display: block
       float: left
       padding: 1rem 2rem
       position: relative
       text-align: center
-      transition: 0.3s
+      transition: $transition-time
       width: 50%
-      &:hover
-        color: $dark-light-color
     .menu-container
       display: inline-block
       .menu-bar-1, .menu-bar-2, .menu-bar-3
         height: 2px
         margin: 2px 0 2px 1rem
-        transition: 0.3s
+        transition: $transition-time
         width: 20px
-    .menu:hover .menu-container
-      .menu-bar-1, .menu-bar-2, .menu-bar-3
-        background-color: $dark-light-color
 
   .web-nav
     bottom: 0
     opacity: 0
     overflow-y: auto
     position: fixed
-    transition: 0.3s
     top: 140px
+    transition: $transition-time
     width: 100%
     z-index: 0
     a, .dropdown, .dropbtn, .dropdown-content
@@ -104,10 +99,6 @@
       position: relative
       .dropdown-content
         position: relative
-    .visible
-      opacity: 1
-    a:hover, .dropbtn:hover, .dropdown:hover .dropbtn
-      border-bottom: 3px transparent solid
   
   .web-nav-right
     display: none

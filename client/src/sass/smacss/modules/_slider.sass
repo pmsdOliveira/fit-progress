@@ -12,7 +12,10 @@
   min-width: 100%
   overflow: hidden
   position: relative
-  transition: 0.5s
+  transition: $slide-transition-time
+
+.slide-content img
+  width: 100%
 
 .slide-1-titleOverlay
   +textOverlay($dark-main-color, 3vw, 5vw, 7vw, 45vw)
@@ -52,8 +55,14 @@
 
 .goLeft
   @extend %slider-button
+  height: 25%
   left: 0
 
 .goRight
   @extend %slider-button
+  height: 25%
   right: 0
+
+@media screen and (max-width: 768px)
+  .slide
+    height: 75%
