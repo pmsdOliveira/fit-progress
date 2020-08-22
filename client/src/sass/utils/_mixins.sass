@@ -19,6 +19,10 @@
   top: $top
   transition: $transition-time
   width: $width
-  &:hover
+  &:active
     background-color: $dark-main-color
     color: $light-color
+  @media (hover: hover)
+    &:hover
+      background-color: $dark-main-color
+      color: $light-color

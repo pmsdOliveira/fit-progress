@@ -2,18 +2,23 @@
   background: none;
   border: none;
   color: transparent;
-  height: 90%;
   outline: none;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   transition: 0.3s;
   width: 10%; }
-  .goLeft:hover, .goRight:hover {
+  .goLeft:active, .goRight:active {
     background: rgba(0, 0, 0, 0.4);
     cursor: pointer; }
-    .goLeft:hover i, .goRight:hover i {
+    .goLeft:active i, .goRight:active i {
       color: #cca43b; }
+  @media (hover: hover) {
+    .goLeft:hover, .goRight:hover {
+      background: rgba(0, 0, 0, 0.4);
+      cursor: pointer; }
+      .goLeft:hover i, .goRight:hover i {
+        color: #cca43b; } }
 
 * {
   margin: 0;
@@ -32,18 +37,24 @@ a {
   text-decoration: none; }
 
 #header {
-  margin: 1rem 2.5rem; }
+  margin: 32px 48px; }
 
 #navbar, #slider {
   width: 95%;
   margin: auto; }
 
 #slider {
-  height: 55vw; }
+  height: 50vw; }
 
 @media screen and (max-width: 768px) {
+  #header {
+    margin: 16px 24px; }
+
   #navbar, #slider {
-    width: 100%; } }
+    width: 100%; }
+
+  #slider {
+    height: 80vw; } }
 .logo img {
   height: 80px; }
 
@@ -54,10 +65,8 @@ a {
 .web-nav {
   overflow: hidden; }
   .web-nav a {
-    border-bottom: 3px transparent solid;
-    display: block;
     float: left;
-    padding: 1rem 2rem;
+    padding: 16px 3vw;
     text-align: center;
     text-decoration: none; }
   .web-nav .web-nav-right {
@@ -68,39 +77,35 @@ a {
   overflow: hidden; }
   .dropdown .dropbtn {
     border: none;
-    border-bottom: 3px transparent solid;
-    padding: 1rem 2rem; }
+    outline: none;
+    padding: 16px 3vw; }
   .dropdown .dropdown-content {
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
     display: none;
     min-width: 180px;
     position: absolute;
     z-index: 1; }
     .dropdown .dropdown-content a {
-      border-left: 3px transparent solid;
       display: block;
       float: none;
-      padding: 1rem 2rem;
+      padding: 16px 32px;
       text-align: left;
       text-decoration: none; }
-
-.web-nav a, .dropbtn, .dropdown-content a {
-  transition: 0.3s; }
-
-.web-nav > a:hover, .web-nav-right a:hover, .dropdown:hover .dropbtn {
-  border-bottom: 3px #cca43b solid; }
-
-.dropdown-content a:hover {
-  border-left: 3px #cca43b solid;
-  padding-left: 2.5rem; }
+    .dropdown .dropdown-content a:active {
+      padding-left: 40px; }
 
 .dropdown:hover .dropdown-content {
   display: block; }
 
+.web-nav a, .dropbtn, .dropdown-content a {
+  transition: 0.3s; }
+
 .mobile-nav a {
   display: none; }
 
-/* RESPONSIVE */
+@media (hover: hover) {
+  .dropdown-content a:hover {
+    padding-left: 40px; } }
 @media screen and (max-width: 768px) {
   .animate .menu-bar-1 {
     transform: rotate(-45deg) translate(-3px, 3px); }
@@ -110,7 +115,6 @@ a {
     transform: rotate(45deg) translate(-2px, -3px); }
 
   .mobile-nav a {
-    border-bottom: 3px #cca43b solid;
     display: block;
     float: left;
     padding: 1rem 2rem;
@@ -131,8 +135,8 @@ a {
     opacity: 0;
     overflow-y: auto;
     position: fixed;
-    transition: 0.3s;
     top: 140px;
+    transition: 0.3s;
     width: 100%;
     z-index: 0; }
     .web-nav a, .web-nav .dropdown, .web-nav .dropbtn, .web-nav .dropdown-content {
@@ -142,10 +146,6 @@ a {
       position: relative; }
       .web-nav .dropdown .dropdown-content {
         position: relative; }
-    .web-nav .visible {
-      opacity: 1; }
-    .web-nav a:hover, .web-nav .dropbtn:hover, .web-nav .dropdown:hover .dropbtn {
-      border-bottom: 3px transparent solid; }
 
   .web-nav-right {
     display: none; }
@@ -168,6 +168,9 @@ a {
   overflow: hidden;
   position: relative;
   transition: 0.5s; }
+
+.slide-content img {
+  width: 100%; }
 
 .slide-1-titleOverlay {
   color: #222222;
@@ -198,9 +201,13 @@ a {
   top: 36vw;
   transition: 0.3s;
   width: 17vw; }
-  .slide-1-btnOverlay:hover {
+  .slide-1-btnOverlay:active {
     background-color: #222222;
     color: #eeeeee; }
+  @media (hover: hover) {
+    .slide-1-btnOverlay:hover {
+      background-color: #222222;
+      color: #eeeeee; } }
 
 .slide-2-titleOverlay {
   color: #222222;
@@ -231,9 +238,13 @@ a {
   top: 30vw;
   transition: 0.3s;
   width: 17vw; }
-  .slide-2-btnOverlay:hover {
+  .slide-2-btnOverlay:active {
     background-color: #222222;
     color: #eeeeee; }
+  @media (hover: hover) {
+    .slide-2-btnOverlay:hover {
+      background-color: #222222;
+      color: #eeeeee; } }
 
 .slide-3-titleOverlay {
   color: #222222;
@@ -264,9 +275,13 @@ a {
   top: 32vw;
   transition: 0.3s;
   width: 17vw; }
-  .slide-3-btnOverlay:hover {
+  .slide-3-btnOverlay:active {
     background-color: #222222;
     color: #eeeeee; }
+  @media (hover: hover) {
+    .slide-3-btnOverlay:hover {
+      background-color: #222222;
+      color: #eeeeee; } }
 
 .slide-4-titleOverlay {
   color: #222222;
@@ -297,25 +312,45 @@ a {
   top: 35vw;
   transition: 0.3s;
   width: 17vw; }
-  .slide-4-btnOverlay:hover {
+  .slide-4-btnOverlay:active {
     background-color: #222222;
     color: #eeeeee; }
+  @media (hover: hover) {
+    .slide-4-btnOverlay:hover {
+      background-color: #222222;
+      color: #eeeeee; } }
 
 .goLeft {
+  border-radius: 0 20px 20px 0;
+  height: 25%;
   left: 0; }
 
 .goRight {
+  border-radius: 20px 0 0 20px;
+  height: 25%;
   right: 0; }
 
+@media screen and (max-width: 768px) {
+  .slide {
+    height: 75%; }
+
+  .goLeft {
+    border-radius: 0 10px 10px 0; }
+
+  .goRight {
+    border-radius: 10px 0 0 10px; } }
 .web-nav,
 .dropbtn,
 .mobile-nav a {
   background-color: #363636; }
 
-.dropdown-content a {
+.dropdown .dropdown-content a {
   color: #363636; }
 
-.mobile-nav a:hover {
+.web-nav > a:active,
+.web-nav-right a:active,
+.dropdown:hover .dropbtn,
+.mobile-nav a:active {
   background-color: #222222; }
 
 .menu-bar-1,
@@ -325,27 +360,81 @@ a {
 
 .web-nav a,
 .dropbtn,
-.dropdown-content a:hover,
+.dropdown-content a:active,
 .mobile-nav a {
   color: #cca43b; }
+
+.web-nav > a:active,
+.web-nav-right a:active,
+.dropbtn:active {
+  border-bottom: 3px #cca43b solid; }
+
+.dropdown-content a:active {
+  border-left: 3px #cca43b solid; }
 
 .dropdown-content a {
   background-color: #eeeeee; }
 
-.dropdown-content a:hover,
-.menu:hover .menu-container .menu-bar-1,
-.menu:hover .menu-container .menu-bar-2,
-.menu:hover .menu-container .menu-bar-3 {
+.dropdown-content a:active,
+.menu:active .menu-container .menu-bar-1,
+.menu:active .menu-container .menu-bar-2,
+.menu:active .menu-container .menu-bar-3 {
   background-color: #cccccc; }
 
-.web-nav > a:hover,
-.web-nav-right a:hover,
+.web-nav > a:active,
+.web-nav-right a:active,
 .dropdown:hover .dropbtn,
-.mobile-nav a:hover {
+.mobile-nav a:active {
   color: #cccccc; }
 
-@media (hover: none) {
-  .mobile-nav a:active {
-    background-color: #222222; } }
+.web-nav a,
+.dropdown .dropbtn {
+  border-bottom: 3px transparent solid; }
+
+.dropdown-content a {
+  border-left: 3px transparent solid; }
+
+@media (hover: hover) {
+  .web-nav > a:hover,
+  .web-nav-right a:hover,
+  .dropdown:hover .dropbtn,
+  .mobile-nav a:hover {
+    background-color: #222222; }
+
+  .dropdown-content a:hover {
+    color: #cca43b; }
+
+  .web-nav > a:hover,
+  .web-nav-right a:hover,
+  .dropdown:hover .dropbtn {
+    border-bottom: 3px #cca43b solid; }
+
+  .dropdown-content a:hover {
+    border-left: 3px #cca43b solid; }
+
+  .dropdown-content a:hover,
+  .menu:hover .menu-container .menu-bar-1,
+  .menu:hover .menu-container .menu-bar-2,
+  .menu:hover .menu-container .menu-bar-3 {
+    background-color: #cccccc; }
+
+  .web-nav > a:hover,
+  .web-nav-right a:hover,
+  .dropdown:hover .dropbtn,
+  .mobile-nav a:hover {
+    color: #cccccc; } }
+@media (max-width: 768px) {
+  .web-nav a:active,
+  .dropbtn:active,
+  .dropdown:active .dropbtn {
+    border-bottom: 3px transparent solid; }
+
+  .mobile-nav a {
+    border-bottom: 3px #cca43b solid; } }
+@media (max-width: 768px) and (hover: hover) {
+  .web-nav a:hover,
+  .dropbtn:hover,
+  .dropdown:hover .dropbtn {
+    border-bottom: 3px transparent solid; } }
 
 /*# sourceMappingURL=App.css.map */

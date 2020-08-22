@@ -13,6 +13,7 @@
   overflow: hidden
   .dropbtn
     border: none
+    outline: none
     padding: 16px 3vw
   .dropdown-content
     box-shadow: 0 8px 16px 0 $box-shadow-color
@@ -26,6 +27,11 @@
       padding: 16px 32px
       text-align: left
       text-decoration: none
+    a:active
+      padding-left: 40px
+
+.dropdown:hover .dropdown-content
+  display: block
 
 .web-nav a, .dropbtn, .dropdown-content a
   transition: $transition-time
@@ -41,31 +47,13 @@
   .dropdown-content a:hover
     padding-left: 40px
 
-  .dropdown:hover .dropdown-content
-    display: block
 
 
 
-// ********** NON HOVER DEVICES **********
-@media (hover: none)
-  .dropdown-content a:active
-    padding-left: 40px
-
-  .dropdown:active .dropdown-content
-    display: block
 
 
-
-// ********** SMALL SCREEN **********
+// ********** SMALLER SCREENS **********
 @media screen and (max-width: 768px)
-  .animate
-    .menu-bar-1
-      transform: rotate(-45deg) translate(-3px, 3px)
-    .menu-bar-2
-      opacity: 0
-    .menu-bar-3
-      transform: rotate(45deg) translate(-2px, -3px)
-  
   .mobile-nav
     a
       display: block
@@ -102,7 +90,3 @@
   
   .web-nav-right
     display: none
-
-  .web-nav.visible
-    opacity: 1
-    z-index: 2
