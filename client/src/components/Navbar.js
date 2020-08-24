@@ -48,7 +48,7 @@ export default class Navbar extends React.Component {
               <a>Plank</a>
               <a>Squats</a>
               <a>Lounges</a>
-              <a>Weight Lifting</a>
+              <a>Weight lifting</a>
             </div>
           </div>
           <a href="#stretch">Stretch</a>

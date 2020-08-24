@@ -3,8 +3,7 @@ import React from "react";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import Slider from "../components/Slider";
-
-import "../styles/sass/Home.sass";
+import Footer from "../components/Footer";
 
 class Home extends React.Component {
   render() {
@@ -13,6 +12,7 @@ class Home extends React.Component {
         <Header />
         <Navbar />
         <Slider />
+        <Footer />
       </div>
     );
   }

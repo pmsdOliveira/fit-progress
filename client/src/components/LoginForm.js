@@ -3,11 +3,11 @@ import React from "react";
 class LoginForm extends React.Component {
   render() {
     return (
-      <div id="login-form" className="login-form">
+      <div id="sign-form" className="sign-form">
         <h2>
           <i className="fa fa-user" aria-hidden="true"></i> Log In
         </h2>
-        <div className="login-data">
+        <div className="sign-data">
           <input type="text" placeholder="Username"></input>
           <input type="text" placeholder="Password"></input>
         </div>
@@ -16,8 +16,10 @@ class LoginForm extends React.Component {
           <label>Remember me</label>
           <a href="#forgot">Forgotten details?</a>
         </div>
-        <button className="signin-button">Sign In</button>
-        <a className="signup">Don't have an account? Sign Up now!</a>
+        <button className="sign-button">Sign In</button>
+        <a href="/register" className="sign-switch">
+          Don't have an account? Sign Up now!
+        </a>
       </div>
     );
   }
