@@ -1,19 +1,18 @@
 import React from "react";
-import "./sass/App.sass";
-//import "./css/App.css";
+import { Route, BrowserRouter as Router } from "react-router-dom";
 
-import Header from "./components/Header";
-import Navbar from "./components/Navbar";
-import Slider from "./components/Slider";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
 
-export default class App extends React.Component {
+class App extends React.Component {
   render() {
     return (
-      <div>
-        <Header />
-        <Navbar />
-        <Slider />
-      </div>
+      <Router>
+        <Route path="/" exact component={Home} />
+        <Route path="/login" exact component={Login} />
+      </Router>
     );
   }
 }
+
+export default App;

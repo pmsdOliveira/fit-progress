@@ -7,7 +7,7 @@ export default class Header extends React.Component {
     return (
       <header id="header">
         <div className="logo">
-          <a href="#home">
+          <a href="/">
             <img src={icon} alt="Fit Progress"></img>
             <img src={title} alt="Diet and Workout Progress"></img>
           </a>

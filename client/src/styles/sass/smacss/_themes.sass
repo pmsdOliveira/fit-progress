@@ -1,0 +1,158 @@
+// ******************** DEFAULTS ********************
+// MAIN COLOR
+.web-nav,
+.dropbtn,
+.mobile-nav a,
+.login-form
+  background-color: $main-color
+
+.dropdown .dropdown-content a
+  color: $main-color
+
+
+
+// DARK MAIN COLOR
+.web-nav > a:active,
+.web-nav-right a:active,
+.dropdown:hover .dropbtn,
+.mobile-nav a:active
+  background-color: $dark-main-color
+
+
+
+// GOLDEN COLOR
+.menu-bar-1,
+.menu-bar-2,
+.menu-bar-3,
+.signin-button
+  background-color: $golden-color
+
+.web-nav a,
+.dropbtn,
+.dropdown-content a:active,
+.mobile-nav a,
+.login-form h2,
+.remember-me label,
+.remember-me a,
+.signup,
+.signin-button:active
+  color: $golden-color
+
+.login-data input
+  border: 2px $golden-color solid
+
+.web-nav > a:active,
+.web-nav-right a:active,
+.dropbtn:active
+  border-bottom: 3px $golden-color solid
+
+.dropdown-content a:active
+  border-left: 3px $golden-color solid
+
+
+
+// LIGHT COLOR
+.dropdown-content a,
+.login-data input,
+.signin-button:active
+  background-color: $light-color
+
+.signin-button
+  color: $light-color
+
+
+
+// DARK LIGHT COLOR
+.dropdown-content a:active,
+.menu:active .menu-container .menu-bar-1,
+.menu:active .menu-container .menu-bar-2,
+.menu:active .menu-container .menu-bar-3
+  background-color: $dark-light-color
+
+.web-nav > a:active,
+.web-nav-right a:active,
+.dropdown:hover .dropbtn,
+.mobile-nav a:active
+  color: $dark-light-color
+
+
+
+// TRANSPARENT
+.web-nav a,
+.dropdown .dropbtn
+  border-bottom: 3px transparent solid
+
+.dropdown-content a
+  border-left: 3px transparent solid
+
+
+
+
+
+
+// ******************** MEDIA QUERIES ********************
+// ********** HOVER DEVICES **********
+@media (hover: hover)
+  // MAIN COLOR
+  .web-nav > a:hover,
+  .web-nav-right a:hover,
+  .dropdown:hover .dropbtn,
+  .mobile-nav a:hover
+    background-color: $dark-main-color
+
+
+
+  // GOLDEN COLOR
+  .dropdown-content a:hover,
+  .signin-button:hover
+    color: $golden-color
+
+  .web-nav > a:hover,
+  .web-nav-right a:hover,
+  .dropdown:hover .dropbtn
+    border-bottom: 3px $golden-color solid
+
+  .dropdown-content a:hover
+    border-left: 3px $golden-color solid
+
+
+
+  // LIGHT COLOR
+  .signin-button:hover
+    background-color: $light-color
+
+
+
+  // DARK LIGHT COLOR
+  .dropdown-content a:hover,
+  .menu:hover .menu-container .menu-bar-1,
+  .menu:hover .menu-container .menu-bar-2,
+  .menu:hover .menu-container .menu-bar-3
+    background-color: $dark-light-color
+
+  .web-nav > a:hover,
+  .web-nav-right a:hover,
+  .dropdown:hover .dropbtn,
+  .mobile-nav a:hover
+    color: $dark-light-color
+
+
+
+
+
+
+// ********** MOBILE SIZE **********
+@media (max-width: 768px)
+  .web-nav a:active,
+  .dropbtn:active,
+  .dropdown:active .dropbtn
+    border-bottom: 3px transparent solid
+
+  .mobile-nav a
+    border-bottom: 3px $golden-color solid
+
+  @media (hover: hover)
+    .web-nav a:hover,
+    .dropbtn:hover,
+    .dropdown:hover .dropbtn
+      border-bottom: 3px transparent solid

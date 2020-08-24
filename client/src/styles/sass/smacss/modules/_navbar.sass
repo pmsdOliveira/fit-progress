@@ -1,0 +1,97 @@
+.web-nav
+  overflow: hidden
+  a
+    float: left
+    padding: 16px 3vw
+    text-align: center
+    text-decoration: none
+    transition: $transition-time
+
+.web-nav-right
+  float: right
+
+.dropdown
+  float: left
+  overflow: hidden
+
+.dropbtn
+  border: none
+  outline: none
+  padding: 16px 3vw
+  transition: $transition-time
+
+.dropdown-content
+  box-shadow: 0 8px 16px 0 $box-shadow-color
+  display: none
+  min-width: 180px
+  position: absolute
+  z-index: 1
+  a
+    display: block
+    float: none
+    padding: 16px 32px
+    text-align: left
+    text-decoration: none
+    transition: $transition-time
+  a:active
+    padding-left: 40px
+
+.dropdown:hover .dropdown-content
+  display: block
+
+.mobile-nav a
+  display: none
+
+
+
+// ******************** MEDIA QUERIES ********************
+// ********** HOVER DEVICES **********
+@media (hover: hover)
+  .dropdown-content a:hover
+    padding-left: 40px
+
+
+
+
+
+
+// ********** SMALLER SCREENS **********
+@media screen and (max-width: 768px)
+  .mobile-nav
+    a
+      display: block
+      float: left
+      padding: 1rem 2rem
+      position: relative
+      text-align: center
+      transition: $transition-time
+      width: 50%
+
+  .menu-container
+    display: inline-block
+    .menu-bar-1, .menu-bar-2, .menu-bar-3
+      height: 2px
+      margin: 2px 0 2px 1rem
+      transition: $transition-time
+      width: 20px
+
+  .web-nav
+    bottom: 0
+    opacity: 0
+    overflow-y: auto
+    position: fixed
+    top: 140px
+    transition: $transition-time
+    transform: translate(0, 100%)
+    width: 100%
+    a, .dropdown, .dropbtn, .dropdown-content
+      text-align: left
+      width: 100%
+      
+  .dropdown
+    position: relative
+    .dropdown-content
+      position: relative
+  
+  .web-nav-right
+    display: none

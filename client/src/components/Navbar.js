@@ -10,7 +10,7 @@ export default class Navbar extends React.Component {
     return (
       <nav id="navbar">
         <div className="mobile-nav">
-          <a href="#login">
+          <a href="/login">
             <i className="fa fa-user" aria-hidden="true"></i> Log In
           </a>
           <a
@@ -53,7 +53,7 @@ export default class Navbar extends React.Component {
           </div>
           <a href="#stretch">Stretch</a>
           <div className="web-nav-right">
-            <a href="#login">
+            <a href="/login">
               <i className="fa fa-user" aria-hidden="true"></i> Log In
             </a>
           </div>
