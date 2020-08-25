@@ -1,2 +1,27 @@
 .footer
-  background-color: $main-color
+  > div
+    h3
+      color: $dark-main-color
+      padding: 16px
+    p
+      color: $main-color
+      padding: 0 16px  1vw
+  > div:not(:nth-child(3))
+    border-right: 1px $dark-main-color solid
+
+.contact-social
+  letter-spacing: 8px
+  text-align: center
+  i
+    color: $main-color
+    font-size: 48px
+
+.footer-tab
+  flex: 1 1 0
+
+@media(max-width: 768px)
+  .footer > div
+    border: none
+
+  .contact-social
+    text-align: center
