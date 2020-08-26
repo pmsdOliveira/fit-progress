@@ -3,11 +3,20 @@
 .web-nav,
 .dropbtn,
 .mobile-nav a,
-.sign-form
+.sign-form,
+.report-button:active,
+.help-container
   background-color: $main-color
 
-.dropdown .dropdown-content a
+.dropdown .dropdown-content a,
+.footer-tab p,
+.contact-social i,
+.report-button,
+.help-data input::placeholder
   color: $main-color
+
+.report-button
+  border: 2px $main-color solid
 
 
 
@@ -15,8 +24,12 @@
 .web-nav > a:active,
 .web-nav-right a:active,
 .dropdown:hover .dropbtn,
-.mobile-nav a:active
+.mobile-nav a:active,
+.slider
   background-color: $dark-main-color
+
+.footer-tab h3
+  color: $dark-main-color
 
 
 
@@ -24,7 +37,9 @@
 .menu-bar-1,
 .menu-bar-2,
 .menu-bar-3,
-.sign-button
+.sign-button,
+.help-button,
+.call-button:active
   background-color: $golden-color
 
 .web-nav a,
@@ -35,11 +50,16 @@
 .remember-me label,
 .remember-me a,
 .sign-switch,
-.sign-button:active
+.sign-button:active,
+.help-description h3,
+.call-button
   color: $golden-color
 
 .sign-data input
   border: 2px $golden-color solid
+
+.help-container
+  border-top: 5px $golden-color solid
 
 .web-nav > a:active,
 .web-nav-right a:active,
@@ -55,10 +75,17 @@
 body,
 .dropdown-content a,
 .sign-data input,
-.sign-button:active
+.sign-button:active,
+.report-button,
+.help-data input,
+.call-button
   background-color: $light-color
 
-.sign-button
+.sign-button,
+.report-button:active,
+.help-button,
+.help-description p,
+.call-button:active
   color: $light-color
 
 
@@ -73,7 +100,8 @@ body,
 .web-nav > a:active,
 .web-nav-right a:active,
 .dropdown:hover .dropbtn,
-.mobile-nav a:active
+.mobile-nav a:active,
+.contact-social i:active
   color: $dark-light-color
 
 
@@ -95,6 +123,12 @@ body,
 // ********** HOVER DEVICES **********
 @media (hover: hover)
   // MAIN COLOR
+  .report-button:hover
+    background-color: $main-color
+
+
+
+  // DARK MAIN COLOR
   .web-nav > a:hover,
   .web-nav-right a:hover,
   .dropdown:hover .dropbtn,
@@ -104,6 +138,9 @@ body,
 
 
   // GOLDEN COLOR
+  .call-button:hover
+    background-color: $golden-color
+
   .dropdown-content a:hover,
   .sign-button:hover
     color: $golden-color
@@ -122,6 +159,10 @@ body,
   .sign-button:hover
     background-color: $light-color
 
+  .report-button:hover,
+  .call-button:hover
+    color: $light-color
+
 
 
   // DARK LIGHT COLOR
@@ -134,7 +175,8 @@ body,
   .web-nav > a:hover,
   .web-nav-right a:hover,
   .dropdown:hover .dropbtn,
-  .mobile-nav a:hover
+  .mobile-nav a:hover,
+  .contact-social i:hover
     color: $dark-light-color
 
 

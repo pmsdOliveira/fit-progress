@@ -54,7 +54,7 @@ const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       goRight();
-    }, 10000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [x]);

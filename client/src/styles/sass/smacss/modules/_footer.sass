@@ -1,27 +1,31 @@
-.footer
-  > div
-    h3
-      color: $dark-main-color
-      padding: 16px
-    p
-      color: $main-color
-      padding: 0 16px  1vw
-  > div:not(:nth-child(3))
-    border-right: 1px $dark-main-color solid
-
-.contact-social
-  letter-spacing: 8px
-  text-align: center
-  i
-    color: $main-color
-    font-size: 48px
-
-.footer-tab
+.footer > div
   flex: 1 1 0
 
-@media(max-width: 768px)
-  .footer > div
-    border: none
+.footer-tab
+  padding: 0 16px
+  h3
+    padding: 16px 0
+  p
+    padding: 0 0 8px
 
+.contact-social
+  letter-spacing: 16px
+  i
+    font-size: 48px
+    transition: $transition-time
+
+.report-button
+  border-radius: 8px
+  cursor: pointer
+  outline: none
+  padding: 4px 16px
+  transition: $transition-time
+
+
+
+
+
+
+@media(max-width: 768px)
   .contact-social
     text-align: center
