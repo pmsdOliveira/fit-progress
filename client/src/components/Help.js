@@ -4,11 +4,12 @@ const Help = () => {
   const [text, setText] = useState("Need help?");
 
   const helpClick = () => {
-    if (document.getElementById("help-container").style.display === "flex") {
-      document.getElementById("help-container").style.display = "none";
+    const container = document.getElementById("help-container");
+    if (container.style.display === "flex") {
+      container.style.display = "none";
       setText("Need help?");
     } else {
-      document.getElementById("help-container").style.display = "flex";
+      container.style.display = "flex";
       setText("Close");
     }
   };

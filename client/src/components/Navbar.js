@@ -1,10 +1,21 @@
 import React from "react";
 
 const Navbar = () => {
+  window.onscroll = () => {
+    const button = document.getElementById("scroll-top-button");
+
+    if (window.scrollY > 150) button.style.opacity = "1";
+    else button.style.opacity = "0";
+  };
+
   const animateDropdown = () => {
     document.getElementById("page-container").classList.toggle("menu-open");
     document.getElementById("web-nav").classList.toggle("visible");
     document.getElementById("menu").classList.toggle("animate");
+  };
+
+  const scrollTop = () => {
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -28,7 +39,7 @@ const Navbar = () => {
       </div>
 
       <div id="web-nav" className="web-nav">
-        <a href="#water">Water</a>
+        <a href="/water">Water</a>
         <div className="dropdown">
           <button className="dropbtn">Diet</button>
           <div className="dropdown-content">
@@ -58,6 +69,13 @@ const Navbar = () => {
           </a>
         </div>
       </div>
+      <button
+        id="scroll-top-button"
+        className="scroll-top-button"
+        onClick={scrollTop}
+      >
+        <i className="fas fa-arrow-up"></i>
+      </button>
     </nav>
   );
 };

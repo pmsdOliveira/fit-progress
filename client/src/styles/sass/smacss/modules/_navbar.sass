@@ -27,6 +27,7 @@
   position: absolute
   z-index: 1
   a
+    cursor: pointer
     display: block
     float: none
     padding: 16px 32px
@@ -42,6 +43,23 @@
 .mobile-nav a
   display: none
 
+.scroll-top-button
+  background-color: $golden-color
+  border: none
+  border-radius: 50%
+  color: $light-color
+  cursor: pointer
+  bottom: 25px
+  opacity: 0
+  outline: none
+  padding: 15px
+  position: fixed
+  right: 25px
+  transition: $transition-time
+  z-index: 1
+  &:active
+    bottom: 35px
+
 
 
 // ******************** MEDIA QUERIES ********************
@@ -49,6 +67,9 @@
 @media (hover: hover)
   .dropdown-content a:hover
     padding-left: 40px
+
+  .scroll-top-button:hover
+    bottom: 35px
 
 
 

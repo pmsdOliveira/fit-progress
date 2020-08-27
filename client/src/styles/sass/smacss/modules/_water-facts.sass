@@ -1,0 +1,63 @@
+.water-benefits,
+.water-sources
+  grid-column: 1 1
+
+.water-kidneys,
+.water-intake
+  grid-column: 2 2
+
+.water-benefits,
+.water-kidneys,
+.water-sources,
+.water-intake
+  padding: 32px
+  position: relative
+
+.water-benefits::after,
+.water-kidneys::after
+  bottom: 0
+  content: ""
+  left: 5%
+  position: absolute
+  width: 90%
+
+.water-benefits h3,
+.water-kidneys h3,
+.water-sources h3,
+.water-intake h3
+  margin-bottom: 32px
+
+.water-benefits p,
+.water-kidneys p,
+.water-sources p,
+.water-intake p
+  margin-bottom: 16px
+
+.water-benefits ol li
+  font-weight: bold
+  list-style-position: inside
+  margin-bottom: 8px
+
+.water-kidneys img
+  display: block
+  margin: auto
+
+.water-intake ul li
+  list-style-position: inside
+
+
+
+
+@media(max-width: 768px)
+  .water-benefits
+    margin-top: 70px
+
+  .water-kidneys img
+    width: 50%
+
+  .water-sources::after
+    bottom: 0
+    content: ""
+    left: 5%
+    position: absolute
+    width: 90%

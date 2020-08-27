@@ -12,7 +12,11 @@
 .footer-tab p,
 .contact-social i,
 .report-button,
-.help-data input::placeholder
+.help-data input::placeholder,
+.water-benefits p,
+.water-kidneys p,
+.water-sources p,
+.water-intake p
   color: $main-color
 
 .report-button
@@ -28,7 +32,8 @@
 .slider
   background-color: $dark-main-color
 
-.footer-tab h3
+.footer-tab h3,
+.water-benefits ol li
   color: $dark-main-color
 
 
@@ -52,7 +57,11 @@
 .sign-switch,
 .sign-button:active,
 .help-description h3,
-.call-button
+.call-button,
+.water-benefits h3,
+.water-kidneys h3,
+.water-sources h3,
+.water-intake h3
   color: $golden-color
 
 .sign-data input
@@ -63,7 +72,9 @@
 
 .web-nav > a:active,
 .web-nav-right a:active,
-.dropbtn:active
+.dropbtn:active,
+.water-benefits::after,
+.water-kidneys::after
   border-bottom: 3px $golden-color solid
 
 .dropdown-content a:active
@@ -191,7 +202,8 @@ body,
   .dropdown:active .dropbtn
     border-bottom: 3px transparent solid
 
-  .mobile-nav a
+  .mobile-nav a,
+  .water-sources::after
     border-bottom: 3px $golden-color solid
 
   @media (hover: hover)
