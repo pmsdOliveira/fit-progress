@@ -1,11 +1,11 @@
 import React from "react";
 import { Route, BrowserRouter as Router } from "react-router-dom";
 
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Water from "./pages/Water";
-import Test from "./pages/Test";
+import Home from "./routes/Home";
+import Login from "./routes/Login";
+import Register from "./routes/Register";
+import Water from "./routes/Water";
+import Test from "./routes/Test";
 
 import "./styles/sass/App.sass";
 
