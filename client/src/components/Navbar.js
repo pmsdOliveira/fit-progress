@@ -4,7 +4,7 @@ const Navbar = () => {
   window.onscroll = () => {
     const button = document.getElementById("scroll-top-button");
 
-    if (window.scrollY > 150) button.style.opacity = "1";
+    if (window.scrollY > 200) button.style.opacity = "1";
     else button.style.opacity = "0";
   };
 

@@ -12,26 +12,31 @@
     background: rgba(0, 0, 0, 0.4);
     cursor: pointer; }
     .goLeft:active i, .goRight:active i {
-      color: #cca43b; }
+      color: #cf9329; }
   @media (hover: hover) {
     .goLeft:hover, .goRight:hover {
       background: rgba(0, 0, 0, 0.4);
       cursor: pointer; }
       .goLeft:hover i, .goRight:hover i {
-        color: #cca43b; } }
+        color: #cf9329; } }
 
 * {
+  box-sizing: border-box;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
+  outline: none;
+  padding: 0; }
+
+html {
+  scroll-behavior: smooth; }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #eeeeee; }
+  height: 100%;
+  width: 100%; }
 
 a, button, p {
-  line-height: 1.2;
-  font-size: 1rem; }
+  font-size: 1rem;
+  line-height: 1.2; }
 
 a {
   text-decoration: none; }
@@ -44,13 +49,46 @@ a {
   margin: auto; }
 
 #slider {
-  height: 50vw; }
+  align-items: center;
+  display: flex;
+  height: 50vw;
+  overflow: hidden;
+  position: relative; }
 
-#login-form {
+#sign-form {
+  border-radius: 8px;
   margin: 5% auto;
+  padding: 32px 24px;
   width: 50%; }
 
-@media screen and (max-width: 768px) {
+#water-hero {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 95%; }
+
+#water-facts {
+  background-color: #cccccc;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  width: 95%; }
+
+#footer {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 56px;
+  padding: 16px 32px; }
+
+#help {
+  bottom: 0;
+  position: fixed;
+  width: 100%; }
+
+@media(max-width: $tablet-size) {
   #header {
     margin: 16px 24px; }
 
@@ -60,14 +98,22 @@ a {
   #slider {
     height: 80vw; }
 
-  #login-form {
+  #sign-form {
     margin: 25% auto;
-    width: 90%; } }
+    width: 90%; }
+
+  #water-hero {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%; }
+
+  #water-facts {
+    display: block;
+    width: 100%; } }
 .logo img {
   height: 80px; }
 
-/* RESPONSIVE */
-@media screen and (max-width: 768px) {
+@media(max-width: $tablet-size) {
   .logo img {
     height: 50px; } }
 .web-nav {
@@ -99,6 +145,7 @@ a {
   position: absolute;
   z-index: 1; }
   .dropdown-content a {
+    cursor: pointer;
     display: block;
     float: none;
     padding: 16px 32px;
@@ -114,10 +161,30 @@ a {
 .mobile-nav a {
   display: none; }
 
+.scroll-top-button {
+  background-color: #cf9329;
+  border: none;
+  border-radius: 50%;
+  color: #eeeeee;
+  cursor: pointer;
+  bottom: 25px;
+  opacity: 0;
+  outline: none;
+  padding: 15px;
+  position: fixed;
+  right: 25px;
+  transition: 0.3s;
+  z-index: 1; }
+  .scroll-top-button:active {
+    bottom: 35px; }
+
 @media (hover: hover) {
   .dropdown-content a:hover {
-    padding-left: 40px; } }
-@media screen and (max-width: 768px) {
+    padding-left: 40px; }
+
+  .scroll-top-button:hover {
+    bottom: 35px; } }
+@media(max-width: $tablet-size) {
   .mobile-nav a {
     display: block;
     float: left;
@@ -155,14 +222,8 @@ a {
 
   .web-nav-right {
     display: none; } }
-.slider {
-  align-items: center;
-  background-color: #222222;
-  display: flex;
-  overflow: hidden;
-  position: relative; }
-  .slider i {
-    font-size: 2rem; }
+.slider i {
+  font-size: 2rem; }
 
 .slide {
   height: 90%;
@@ -332,7 +393,7 @@ a {
   height: 25%;
   right: 0; }
 
-@media screen and (max-width: 768px) {
+@media(max-width: $tablet-size) {
   .slide {
     height: 75%; }
 
@@ -341,6 +402,223 @@ a {
 
   .goRight {
     border-radius: 10px 0 0 10px; } }
+.water-not-logged {
+  flex: 1 1 0;
+  margin: 8px -16px;
+  max-width: 25vw; }
+  .water-not-logged h2 {
+    margin-bottom: 16px; }
+  .water-not-logged p {
+    margin-bottom: 32px; }
+  .water-not-logged a {
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 8px;
+    outline: none;
+    transition: 0.3s; }
+
+.water-hero img {
+  flex: 1 1 0;
+  margin: 8px -16px;
+  max-width: 40vw; }
+
+@media (max-width: 768px) {
+  .water-not-logged {
+    max-width: none;
+    width: 90%; }
+
+  .water-hero img {
+    max-width: none;
+    width: 90%; } }
+.water-benefits,
+.water-sources {
+  grid-column: 1 1; }
+
+.water-kidneys,
+.water-intake {
+  grid-column: 2 2; }
+
+.water-benefits,
+.water-kidneys,
+.water-sources,
+.water-intake {
+  padding: 32px;
+  position: relative; }
+
+.water-benefits::after,
+.water-kidneys::after {
+  bottom: 0;
+  content: "";
+  left: 5%;
+  position: absolute;
+  width: 90%; }
+
+.water-benefits h3,
+.water-kidneys h3,
+.water-sources h3,
+.water-intake h3 {
+  margin-bottom: 32px; }
+
+.water-benefits p,
+.water-kidneys p,
+.water-sources p,
+.water-intake p {
+  margin-bottom: 16px; }
+
+.water-benefits ol li {
+  font-weight: bold;
+  list-style-position: inside;
+  margin-bottom: 8px; }
+
+.water-kidneys img {
+  display: block;
+  margin: auto; }
+
+.water-intake ul li {
+  list-style-position: inside; }
+
+@media(max-width: $tablet-size) {
+  .water-kidneys img {
+    width: 50%; }
+
+  .water-sources::after {
+    bottom: 0;
+    content: "";
+    left: 5%;
+    position: absolute;
+    width: 90%; } }
+.sign-form h2 {
+  font-weight: bold;
+  margin-bottom: 32px;
+  text-align: center; }
+
+.sign-data input {
+  border-radius: 4px;
+  margin-bottom: 16px;
+  outline: none;
+  padding: 8px;
+  width: 100%; }
+
+.remember-me {
+  margin-bottom: 16px; }
+  .remember-me input {
+    cursor: pointer;
+    outline: none; }
+  .remember-me label {
+    margin-left: 8px; }
+  .remember-me a {
+    float: right; }
+    .remember-me a:active {
+      text-decoration: underline; }
+
+.sign-button {
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  outline: none;
+  padding: 8px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  width: 100%; }
+
+.sign-switch {
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  width: 100%; }
+  .sign-switch:active {
+    text-decoration: underline; }
+
+@media (hover: hover) {
+  .remember-me a:hover {
+    text-decoration: underline; }
+
+  .sign-switch:hover {
+    text-decoration: underline; } }
+.footer > div {
+  flex: 1 1 0; }
+
+.footer-tab {
+  padding: 0 16px; }
+  .footer-tab h3 {
+    padding: 16px 0; }
+  .footer-tab p {
+    padding: 0 0 8px; }
+
+.contact-social {
+  letter-spacing: 16px; }
+  .contact-social i {
+    font-size: 48px;
+    transition: 0.3s; }
+
+.report-button {
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  padding: 4px 16px;
+  transition: 0.3s; }
+
+@media(max-width: $tablet-size) {
+  .contact-social {
+    text-align: center; } }
+.help-button {
+  border: none;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  outline: none;
+  padding: 16px 32px;
+  text-align: center; }
+  .help-button:active {
+    text-decoration: underline; }
+
+.help-container {
+  display: none;
+  flex-direction: row;
+  text-align: left;
+  transition: 0.3s;
+  width: 100%; }
+  .help-container > div {
+    flex: 1 1 0; }
+
+.help-description {
+  margin: 32px 64px; }
+  .help-description h3 {
+    margin-bottom: 8px; }
+
+.help-data {
+  display: block;
+  margin: 32px 64px; }
+  .help-data input {
+    border: none;
+    margin-bottom: 8px;
+    outline: none;
+    padding: 8px;
+    width: 100%; }
+
+.call-button {
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  margin-top: 8px;
+  padding: 8px;
+  text-transform: uppercase;
+  transition: 0.3s; }
+
+@media(hover:hover) {
+  .help-button:hover {
+    text-decoration: underline; } }
+@media(max-width: $tablet-size) {
+  .help-container {
+    flex-direction: column; }
+
+  .help-description, .help-data {
+    margin: 32px; } }
+.menu-open {
+  position: fixed; }
+
 .animate .menu-bar-1 {
   transform: rotate(-45deg) translate(-3px, 3px); }
 .animate .menu-bar-2 {
@@ -350,69 +628,119 @@ a {
 
 .web-nav.visible {
   opacity: 1;
-  transform: translate(0, 0%); }
+  transform: translate(0, 0%);
+  z-index: 1; }
 
 .web-nav,
 .dropbtn,
 .mobile-nav a,
-.login-form {
+.sign-form,
+.report-button:active,
+.help-container {
   background-color: #363636; }
 
-.dropdown .dropdown-content a {
+.dropdown .dropdown-content a,
+.footer-tab p,
+.contact-social i,
+.report-button,
+.help-data input::placeholder,
+.water-not-logged p,
+.water-not-logged a,
+.water-benefits p,
+.water-kidneys p,
+.water-sources p,
+.water-intake p {
   color: #363636; }
+
+.report-button {
+  border: 2px #363636 solid; }
 
 .web-nav > a:active,
 .web-nav-right a:active,
 .dropdown:hover .dropbtn,
-.mobile-nav a:active {
+.mobile-nav a:active,
+.slider {
   background-color: #222222; }
+
+.footer-tab h3,
+.water-benefits ol li {
+  color: #222222; }
 
 .menu-bar-1,
 .menu-bar-2,
 .menu-bar-3,
-.signin-button {
-  background-color: #cca43b; }
+.sign-button,
+.help-button,
+.call-button:active,
+.water-not-logged a:active {
+  background-color: #cf9329; }
 
 .web-nav a,
 .dropbtn,
 .dropdown-content a:active,
 .mobile-nav a,
-.login-form h2,
+.sign-form h2,
 .remember-me label,
 .remember-me a,
-.signup,
-.signin-button:active {
-  color: #cca43b; }
+.sign-switch,
+.sign-button:active,
+.help-description h3,
+.call-button,
+.water-not-logged h2,
+.water-benefits h3,
+.water-kidneys h3,
+.water-sources h3,
+.water-intake h3 {
+  color: #cf9329; }
 
-.login-data input {
-  border: 2px #cca43b solid; }
+.sign-data input,
+.water-not-logged a {
+  border: 2px #cf9329 solid; }
+
+.help-container {
+  border-top: 5px #cf9329 solid; }
 
 .web-nav > a:active,
 .web-nav-right a:active,
-.dropbtn:active {
-  border-bottom: 3px #cca43b solid; }
+.dropbtn:active,
+#water-hero,
+.water-benefits::after,
+.water-kidneys::after {
+  border-bottom: 3px #cf9329 solid; }
 
 .dropdown-content a:active {
-  border-left: 3px #cca43b solid; }
+  border-left: 3px #cf9329 solid; }
 
+body,
 .dropdown-content a,
-.login-data input,
-.signin-button:active {
+.sign-data input,
+.sign-button:active,
+.report-button,
+.help-data input,
+.call-button {
   background-color: #eeeeee; }
 
-.signin-button {
+.sign-button,
+.report-button:active,
+.help-button,
+.help-description p,
+.call-button:active,
+.water-not-logged a:active {
   color: #eeeeee; }
 
 .dropdown-content a:active,
 .menu:active .menu-container .menu-bar-1,
 .menu:active .menu-container .menu-bar-2,
-.menu:active .menu-container .menu-bar-3 {
+.menu:active .menu-container .menu-bar-3,
+#water-hero,
+.water-not-logged a {
   background-color: #cccccc; }
 
 .web-nav > a:active,
 .web-nav-right a:active,
 .dropdown:hover .dropbtn,
-.mobile-nav a:active {
+.mobile-nav a:active,
+.contact-social i:active {
   color: #cccccc; }
 
 .web-nav a,
@@ -423,26 +751,38 @@ a {
   border-left: 3px transparent solid; }
 
 @media (hover: hover) {
+  .report-button:hover {
+    background-color: #363636; }
+
   .web-nav > a:hover,
   .web-nav-right a:hover,
   .dropdown:hover .dropbtn,
   .mobile-nav a:hover {
     background-color: #222222; }
 
+  .call-button:hover,
+  .water-not-logged a:hover {
+    background-color: #cf9329; }
+
   .dropdown-content a:hover,
-  .signin-button:hover {
-    color: #cca43b; }
+  .sign-button:hover {
+    color: #cf9329; }
 
   .web-nav > a:hover,
   .web-nav-right a:hover,
   .dropdown:hover .dropbtn {
-    border-bottom: 3px #cca43b solid; }
+    border-bottom: 3px #cf9329 solid; }
 
   .dropdown-content a:hover {
-    border-left: 3px #cca43b solid; }
+    border-left: 3px #cf9329 solid; }
 
-  .signin-button:hover {
+  .sign-button:hover {
     background-color: #eeeeee; }
+
+  .report-button:hover,
+  .call-button:hover,
+  .water-not-logged a:hover {
+    color: #eeeeee; }
 
   .dropdown-content a:hover,
   .menu:hover .menu-container .menu-bar-1,
@@ -453,7 +793,8 @@ a {
   .web-nav > a:hover,
   .web-nav-right a:hover,
   .dropdown:hover .dropbtn,
-  .mobile-nav a:hover {
+  .mobile-nav a:hover,
+  .contact-social i:hover {
     color: #cccccc; } }
 @media (max-width: 768px) {
   .web-nav a:active,
@@ -461,12 +802,13 @@ a {
   .dropdown:active .dropbtn {
     border-bottom: 3px transparent solid; }
 
-  .mobile-nav a {
-    border-bottom: 3px #cca43b solid; } }
+  .mobile-nav a,
+  .water-sources::after {
+    border-bottom: 3px #cf9329 solid; } }
 @media (max-width: 768px) and (hover: hover) {
   .web-nav a:hover,
   .dropbtn:hover,
   .dropdown:hover .dropbtn {
     border-bottom: 3px transparent solid; } }
 
-/*# sourceMappingURL=Home.css.map */
+/*# sourceMappingURL=App.css.map */

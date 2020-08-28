@@ -13,6 +13,8 @@
 .contact-social i,
 .report-button,
 .help-data input::placeholder,
+.water-not-logged p,
+.water-not-logged a,
 .water-benefits p,
 .water-kidneys p,
 .water-sources p,
@@ -44,7 +46,8 @@
 .menu-bar-3,
 .sign-button,
 .help-button,
-.call-button:active
+.call-button:active,
+.water-not-logged a:active
   background-color: $golden-color
 
 .web-nav a,
@@ -58,13 +61,15 @@
 .sign-button:active,
 .help-description h3,
 .call-button,
+.water-not-logged h2,
 .water-benefits h3,
 .water-kidneys h3,
 .water-sources h3,
 .water-intake h3
   color: $golden-color
 
-.sign-data input
+.sign-data input,
+.water-not-logged a
   border: 2px $golden-color solid
 
 .help-container
@@ -73,6 +78,7 @@
 .web-nav > a:active,
 .web-nav-right a:active,
 .dropbtn:active,
+#water-hero,
 .water-benefits::after,
 .water-kidneys::after
   border-bottom: 3px $golden-color solid
@@ -96,7 +102,8 @@ body,
 .report-button:active,
 .help-button,
 .help-description p,
-.call-button:active
+.call-button:active,
+.water-not-logged a:active
   color: $light-color
 
 
@@ -105,7 +112,9 @@ body,
 .dropdown-content a:active,
 .menu:active .menu-container .menu-bar-1,
 .menu:active .menu-container .menu-bar-2,
-.menu:active .menu-container .menu-bar-3
+.menu:active .menu-container .menu-bar-3,
+#water-hero,
+.water-not-logged a
   background-color: $dark-light-color
 
 .web-nav > a:active,
@@ -149,7 +158,8 @@ body,
 
 
   // GOLDEN COLOR
-  .call-button:hover
+  .call-button:hover,
+  .water-not-logged a:hover
     background-color: $golden-color
 
   .dropdown-content a:hover,
@@ -171,7 +181,8 @@ body,
     background-color: $light-color
 
   .report-button:hover,
-  .call-button:hover
+  .call-button:hover,
+  .water-not-logged a:hover
     color: $light-color
 
 
