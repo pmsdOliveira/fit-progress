@@ -38,7 +38,7 @@ Ingredient.prototype.updateIngredientById = (req, res) => {
   ingredientModel.findByIdAndUpdate(
     req.params.id,
     { $set: req.body },
-    { new: true },
+    { new: true }, // returns the updated document instead of the outdated
     (err, updatedIngredient) => {
       if (err) {
         res.send(err);

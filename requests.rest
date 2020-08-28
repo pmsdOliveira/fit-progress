@@ -1,0 +1,13 @@
+POST http://localhost:8000/users/
+Content-Type: application/json
+
+{
+  "username": "Neon",
+  "name": "Pedro Oliveira",
+  "mail": "pmsd.oliveira@gmail.com",
+  "password": "passemaluca"
+}
+
+###
+
+DELETE http://localhost:8000/users/5f48e69d8419bb11448a63b2/
